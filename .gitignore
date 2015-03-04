@@ -19,6 +19,7 @@ html-report
 xunit.xml
 node_modules
 npm-debug.log
+openrc.sh
 
 .project
 .idea

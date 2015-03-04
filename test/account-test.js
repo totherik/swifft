@@ -11,7 +11,7 @@ test('account', t => {
         t.equal(typeof account.authenticate, 'function');
         t.equal(typeof account.getMetadata, 'function');
         t.equal(typeof account.updateMetadata, 'function');
-        t.equal(typeof account.listContainers, 'function');
+        t.equal(typeof account.list, 'function');
         t.end();
 
     });
@@ -67,7 +67,7 @@ test('account', t => {
     t.test('listContainers', t => {
 
         let account = Swifft.create();
-        account.listContainers(function (err, containers) {
+        account.list    (function (err, containers) {
             t.error(err);
             t.ok(containers);
             t.ok(Array.isArray(containers));

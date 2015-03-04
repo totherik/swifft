@@ -8,6 +8,14 @@ test('container', t => {
 
     t.test('create', t => {
         let container = Swifft.create().container(name);
+
+        t.ok(container);
+        t.equal(typeof container.list, 'function');
+        t.equal(typeof container.create, 'function');
+        t.equal(typeof container.delete, 'function');
+        t.equal(typeof container.getMetadata, 'function');
+        t.equal(typeof container.updateMetadata, 'function');
+
         container.create(function (err, data) {
             t.error(err);
             t.ok(data);
@@ -31,7 +39,7 @@ test('container', t => {
     t.test('listObjects', t => {
 
         let container = Swifft.create().container(name);
-        container.listObjects(function (err, data) {
+        container.list(function (err, data) {
             t.error(err);
             t.ok(Array.isArray(data));
             t.end();
@@ -43,7 +51,7 @@ test('container', t => {
     t.test('listObjects w/ criteria', t => {
 
         let container = Swifft.create().container(name);
-        container.listObjects({ limit: 1 }, function (err, data) {
+        container.list({ limit: 1 }, function (err, data) {
             t.error(err);
             t.ok(Array.isArray(data));
             t.end();

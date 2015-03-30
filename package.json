@@ -26,12 +26,12 @@
   },
   "homepage": "https://github.com/totherik/swifft",
   "dependencies": {
-    "babel-runtime": "^4.6.6",
+    "babel-runtime": "4.6.6",
     "minimist": "^1.1.0",
     "wreck": "^5.2.0"
   },
   "devDependencies": {
-    "babel": "^4.6.6",
+    "babel": "4.6.6",
     "concat-stream": "^1.4.7",
     "glob": "^4.4.1",
     "istanbul": "^0.3.6",

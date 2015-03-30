@@ -19,10 +19,10 @@ let options = {
 }
 
 
-let swifft = Swifft.create(options);
+let account = Swifft.create(options);
 
 // List containers
-swifft.list((err, containers) => {
+account.list((err, containers) => {
     // Print all container names and size
     for (let { name, bytes } of containers) {
         console.log(`${name}: ${bytes}`);
@@ -30,7 +30,7 @@ swifft.list((err, containers) => {
 
     // List contents of first container.
     let [ { name: first } ] = container;
-    swifft.container(first).list((err, objects) => {
+    account.container(first).list((err, objects) => {
         for (let { name, bytes } of objects) {
             console.log(`${name}: ${bytes}`);
         }

@@ -67,7 +67,7 @@ test('account', t => {
     t.test('listContainers', t => {
 
         let account = Swifft.create();
-        account.list    (function (err, containers) {
+        account.list(function (err, containers) {
             t.error(err);
             t.ok(containers);
             t.ok(Array.isArray(containers));

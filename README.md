@@ -61,9 +61,6 @@ $ swift list foo
 Returns an Account instance.
 
 ### Account
-#### `authenticate(credentials)`
-Authenticate using the provided credentials. Called automatically if credentials
-are provided upon creation.
 
 #### `getMetadata(callback)`
 Retrieve metadata for the current account.

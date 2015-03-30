@@ -38,7 +38,7 @@
     "tape": "^3.5.0"
   },
   "bin": {
-    "swifft": "swifft.js"
+    "swifft": "dist/bin/swifft.js"
   },
   "directories": {
     "test": "test"

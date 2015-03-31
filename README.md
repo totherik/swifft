@@ -76,6 +76,9 @@ Get the named container. Returns a Container instance.
 
 
 ### Container
+#### `create([settings], callback)`
+Create the named container.
+
 #### `getMetadata(callback)`
 Retrieve metadata for the current container.
 
@@ -93,6 +96,9 @@ Get the named object. returns an Object instance.
 
 
 ### Object
+#### `create([settings], callback)`
+Create the named Object.
+
 #### `get(callback)`
 Get the contents and settings of the current object.
 

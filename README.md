@@ -10,12 +10,12 @@ import Swifft from 'swifft';
 // These are the default env vars used internally by swifft.
 // Usage here is for demonstration purposes only.
 let options = {
-    os_auth_url =    ENV.OS_AUTH_URL,
-    os_tenant_id =   ENV.OS_TENANT_ID,
-    os_tenant_name = ENV.OS_TENANT_NAME,
-    region =         ENV.OS_REGION_NAME,
-    username =       ENV.OS_USERNAME,
-    password =       ENV.OS_PASSWORD
+    auth_url =    process.env.OS_AUTH_URL,
+    tenant_id =   process.env.OS_TENANT_ID,
+    tenant_name = process.env.OS_TENANT_NAME,
+    region =      process.env.OS_REGION_NAME,
+    username =    process.env.OS_USERNAME,
+    password =    process.env.OS_PASSWORD
 }
 
 

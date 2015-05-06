@@ -1,6 +1,6 @@
 {
   "name": "swifft",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "An OpenStack Swift Client",
   "main": "dist/index.js",
   "scripts": {

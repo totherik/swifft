@@ -64,7 +64,7 @@ test('object', t => {
 
     t.test('getRange', t => {
 
-        let account = Swifft.create(options);
+        let account = Swifft.create();
         let request = {
             headers: {
                 range: 'bytes=0-1' //only get first 2 bytes
@@ -89,7 +89,7 @@ test('object', t => {
 
     t.test('getStream', t => {
 
-        let account = Swifft.create(options);
+        let account = Swifft.create();
         account.container(cname).object(oname).getStream(function (err, stream, settings) {
             t.error(err);
 

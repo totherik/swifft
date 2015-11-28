@@ -102,8 +102,11 @@ Create the named Object.
 #### `get(callback)`
 Get the contents and settings of the current object.
 
-### `getStream()`
+#### `getStream()`
 Get the contents as a readable stream and settings of the current object.
+
+#### `getRange()`
+Get the contents as a readable range and settings of the current object.
 
 #### `getMetadata(callback)`
 Retrieve metadata for the current object.

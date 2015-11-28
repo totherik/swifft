@@ -61,9 +61,35 @@ test('object', t => {
     });
 
 
+
+    t.test('getRange', t => {
+
+        let account = Swifft.create(options);
+        let request = {
+            headers: {
+                range: 'bytes=0-1' //only get first 2 bytes
+            }
+        };
+
+        account.container(cname).object(oname).getRange(request.headers,function (err, stream, settings) {
+            t.error(err);
+
+            t.ok(settings);
+            t.equal(settings.metadata.foo, 'bar');
+
+            t.ok(stream);
+            t.equal(stream.length, 2);
+            t.equal(stream.toString('utf8'), 'fo');
+            t.end();
+
+        });
+
+    });
+
+
     t.test('getStream', t => {
 
-        let account = Swifft.create();
+        let account = Swifft.create(options);
         account.container(cname).object(oname).getStream(function (err, stream, settings) {
             t.error(err);
 
@@ -78,6 +104,7 @@ test('object', t => {
         });
 
     });
+
 
 
     t.test('copy', t => {

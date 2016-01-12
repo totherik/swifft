@@ -65,13 +65,7 @@ test('object', t => {
     t.test('getRange', t => {
 
         let account = Swifft.create();
-        let request = {
-            headers: {
-                range: 'bytes=0-1' //only get first 2 bytes
-            }
-        };
-
-        account.container(cname).object(oname).getRange(request.headers,function (err, stream, settings) {
+        account.container(cname).object(oname).getRange('bytes=0-1', function (err, stream, settings) {
             t.error(err);
 
             t.ok(settings);
@@ -99,6 +93,25 @@ test('object', t => {
             t.ok(stream);
             stream.pipe(concat(data => {
                 t.equal(data.toString('utf8'), 'foo\n');
+                t.end();
+            }));
+        });
+
+    });
+
+
+    t.test('getStream with range', t => {
+
+        let account = Swifft.create();
+        account.container(cname).object(oname).getStream('bytes=0-1', function (err, stream, settings) {
+            t.error(err);
+
+            t.ok(settings);
+            t.equal(settings.metadata.foo, 'bar');
+
+            t.ok(stream);
+            stream.pipe(concat(data => {
+                t.equal(data.toString('utf8'), 'fo');
                 t.end();
             }));
         });

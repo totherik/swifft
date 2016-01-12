@@ -102,11 +102,13 @@ Create the named Object.
 #### `get(callback)`
 Get the contents and settings of the current object.
 
-#### `getStream()`
-Get the contents as a readable stream and settings of the current object.
+#### `getStream([range,] callback)`
+Get the contents as a readable stream and settings of the current object. See
+[Object Storage API Docs](http://developer.openstack.org/api-ref-objectstorage-v1.html) for valid Range values.
 
-#### `getRange()`
-Get the contents as a readable range and settings of the current object.
+#### `getRange(range, callback)`
+Get the contents as a readable range and settings of the current object. See
+[Object Storage API Docs](http://developer.openstack.org/api-ref-objectstorage-v1.html) for valid Range values.
 
 #### `getMetadata(callback)`
 Retrieve metadata for the current object.

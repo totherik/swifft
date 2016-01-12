@@ -20,6 +20,12 @@
     "store"
   ],
   "author": "Erik Toth <totherik@gmail.com>",
+  "contributors": [
+    {
+      "name": "@wiserweb",
+      "url": "https://github.com/wiserweb"
+    }
+  ],
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/totherik/swifft/issues"

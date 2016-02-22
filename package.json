@@ -24,6 +24,10 @@
     {
       "name": "@wiserweb",
       "url": "https://github.com/wiserweb"
+    },
+    {
+        "name": "@gabifoot",
+        "url": "https://github.com/gabifoot"
     }
   ],
   "license": "ISC",

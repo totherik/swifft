@@ -6,22 +6,24 @@ import Swifft from '../index.js';
 
 const argv = minimist(process.argv.slice(2), {
     alias: {
-        'os_auth_url':    'a',
-        'os_tenant_id':   'i',
-        'os_tenant_name': 'n',
-        'os_username':    'u',
-        'os_password':    'p',
-        'region':         'r'
+        'os_auth_url':      'a',
+        'os_tenant_id':     'i',
+        'os_tenant_name':   'n',
+        'os_username':      'u',
+        'os_password':      'p',
+        'os_endpoint_type': 'e',
+        'region':           'r'
     },
     default: {
         /*
          // These defaults live in the lib/swifft_account.js implementation.
-         'os_auth_url':    process.env.OS_AUTH_URL,
-         'os_tenant_id':   process.env.OS_TENANT_ID,
-         'os_tenant_name': process.env.OS_TENANT_NAME,
-         'os_username':    process.env.OS_USERNAME,
-         'os_password':    process.env.OS_PASSWORD,
-         'region':         process.env.OS_REGION_NAME
+         'os_auth_url':      process.env.OS_AUTH_URL,
+         'os_tenant_id':     process.env.OS_TENANT_ID,
+         'os_tenant_name':   process.env.OS_TENANT_NAME,
+         'os_username':      process.env.OS_USERNAME,
+         'os_password':      process.env.OS_PASSWORD,
+         'os_endpoint_type': process.env.OS_ENDPOINT_TYPE,
+         'region':           process.env.OS_REGION_NAME
          */
     }
 });

@@ -1,6 +1,6 @@
 {
   "name": "swifft",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "An OpenStack Swift Client",
   "main": "dist/index.js",
   "scripts": {
@@ -26,8 +26,8 @@
       "url": "https://github.com/wiserweb"
     },
     {
-        "name": "@gabifoot",
-        "url": "https://github.com/gabifoot"
+      "name": "@gabifoot",
+      "url": "https://github.com/gabifoot"
     }
   ],
   "license": "ISC",
